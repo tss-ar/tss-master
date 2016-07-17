@@ -2,6 +2,8 @@
 
 // const config = require('./conf.json');
 const express = require('express');
+var argv = require('yargs').argv;
+
 var app = express();
 
 app.post('/keepalive/:name/:ip', function (req, res) {
@@ -16,6 +18,6 @@ app.post('/keepalive/:name/:ip', function (req, res) {
    res.sendStatus(200);
 });
 
-app.listen(3000, function () {
-    console.log('Example app listening on port 3000!');
+app.listen(argv.port, function () {
+    console.log(`Example app listening on port ${argv.port}!`);
 });
