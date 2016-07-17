@@ -2,7 +2,7 @@
 
 ## Usage
 
-node index --port 3357
+./prerequisites/node-x64.exe index --port 3357
 
 ## Running on windows as a service
 
